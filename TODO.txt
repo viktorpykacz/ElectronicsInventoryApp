@@ -1,0 +1,98 @@
+﻿Co do zrobienia:
+1. Dodanie TAB w głównym widoku.
+
+
+1. Mikrokontrolery i moduły rozwojowe
+ESP32 / ESP8266 / ESP32-S3
+Arduino (Uno, Nano, Mega, itp.)
+Raspberry Pi / Pico
+STM32 / STM8
+Moduły z mikrokontrolerami innych firm (np. ATmega, PIC)
+Moduły rozwojowe z czujnikami / Wi-Fi / Bluetooth
+
+2. Czujniki (sensory)
+Temperatury i wilgotności (DHT11, DHT22, BME280, DS18B20)
+Ruchu i przyspieszenia (PIR, MPU6050, ADXL345)
+Światła i koloru (LDR, TCS34725)
+Odległości (ultradźwiękowe, IR, ToF)
+Gazu i jakości powietrza (MQ-series, CCS811)
+Magnetyczne / Hall’a
+Inne specjalistyczne (np. ciśnienia, dotyku, napięcia)
+
+3. Elementy pasywne
+Rezystory (wartości, moc, typ SMD/THT)
+Kondensatory (elektrolityczne, ceramiczne, foliowe)
+Cewki i dławiki
+Potencjometry i trymerki
+
+4. Elementy aktywne
+
+Diody (prostownicze, Zenera, LED, RGB)
+Tranzystory (NPN, PNP, MOSFET, JFET)
+Układy scalone (TTL, CMOS, ADC, DAC, regulator napięcia, op-amp)
+Stabilizatory napięcia (LM7805, LM317, itp.)
+
+5. Moduły komunikacyjne
+
+Wi-Fi (ESP-01, ESP32)
+Bluetooth (HC-05, HM-10)
+LoRa / NRF24L01 / ZigBee
+GSM / GPS / GNSS
+Moduły RFID / NFC
+Porty szeregowe (UART, USB-TTL, RS485)
+
+6. Silniki i elementy napędowe
+
+Silniki DC
+Silniki krokowe
+Serwomechanizmy
+Sterowniki silników (L298N, A4988, DRV8825)
+Przekładnie, osie, wałki
+
+7. Zasilanie
+
+Zasilacze (sieciowe, laboratoryjne)
+Akumulatory / baterie
+Powerbanki / ogniwa Li-Ion / Li-Po
+Moduły ładowania (TP4056, BMS)
+Przetwornice (step-up, step-down)
+Kable zasilające, złącza DC, koszyki na baterie
+
+8. Interfejsy użytkownika
+
+Wyświetlacze (LCD, OLED, TFT, ePaper)
+Klawiatury matrycowe, przyciski
+Enkodery, joysticki
+Buzzer / głośniczki
+Diody sygnalizacyjne
+
+9. Płytki, złącza i okablowanie
+
+Płytki stykowe
+Przewody (Dupont, krokodylki, zasilające)
+Złącza (JST, Molex, pin-header, ARK)
+Taśmy IDC, gniazda, wtyczki USB
+10. Prototypowanie i montaż
+Płytki uniwersalne / PCB
+
+Obudowy
+Radiatory
+Śruby, dystanse, uchwyty
+Narzędzia pomiarowe (multimetr, oscyloskop)
+Narzędzia lutownicze (lutownica, cyna, topnik)
+
+11. Oświetlenie i LED
+
+Taśmy LED
+Moduły NeoPixel / WS2812 / SK6812
+Sterowniki LED
+Zasilacze LED
+
+12. Inne / nieprzypisane
+
+Karty SD / pamięci
+Przekaźniki
+Czujniki dotyku / wilgoci gleby / dźwięku
+Moduły czasowe (RTC, timery)
+Elementy optyczne (fototranzystory, diody IR)
+Różne adaptery / konwertery

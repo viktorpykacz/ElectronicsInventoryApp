@@ -1,0 +1,30 @@
+[
+  {
+    "Id": 1,
+    "Name": "Rezystor 10kΩ 1%",
+    "CategoryId": 1,
+    "Manufacturer": "Vishay",
+    "PartNumber": "MRS25-10K",
+    "Description": "Rezystor metalizowany 1/4W",
+    "Quantity": 200,
+    "LocationId": 1,
+    "ImagePath": "images/resistor_10k.jpg",
+    "DatasheetUrl": "",
+    "CreatedAt": "2025-11-03T12:00:00",
+    "UpdatedAt": "2025-11-03T12:00:00"
+  },
+  {
+    "Id": 2,
+    "Name": "ESP32 DevKitC",
+    "CategoryId": 10,
+    "Manufacturer": "Espressif",
+    "PartNumber": "ESP32-DEVKITC",
+    "Description": "Moduł deweloperski ESP32 z USB-UART",
+    "Quantity": 5,
+    "LocationId": 2,
+    "ImagePath": "images/esp32.jpg",
+    "DatasheetUrl": "",
+    "CreatedAt": "2025-11-03T12:05:00",
+    "UpdatedAt": "2025-11-03T12:05:00"
+  }
+]
