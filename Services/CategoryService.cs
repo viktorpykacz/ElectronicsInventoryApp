@@ -6,40 +6,134 @@ using System.Linq;
 public class CategoryService
 {
     private readonly JsonRepository<Category> _repo;
-    private readonly List<Category> _cache;
+    private List<Category> _cache;
 
     public CategoryService(string filePath)
     {
         _repo = new JsonRepository<Category>(filePath);
-        _cache = _repo.Load();
+        _cache = _repo.Load() ?? new List<Category>();
     }
 
-    public IEnumerable<Category> GetAll() => _cache.OrderBy(c => c.Name);
-    public Category? GetById(int id) => _cache.FirstOrDefault(c => c.Id == id);
-    public void Add(Category c)
+    /// <summary>
+    /// Zwraca wszystkie kategorie g³ówne (czyli te bez rodzica).
+    /// Ka¿da z nich mo¿e mieæ zagnie¿d¿one Subcategories.
+    /// </summary>
+    public IEnumerable<Category> GetAll()
     {
-        c.Id = _cache.Any() ? _cache.Max(x => x.Id) + 1 : 1;
-        _cache.Add(c);
+        return _cache.OrderBy(c => c.Name);
+    }
+
+    /// <summary>
+    /// Zwraca wszystkie kategorie w postaci sp³aszczonej listy (wraz z podkategoriami).
+    /// </summary>
+    public IEnumerable<Category> GetAllFlattened()
+    {
+        var result = new List<Category>();
+        foreach (var root in _cache)
+            Flatten(root, result);
+        return result.OrderBy(c => c.Name);
+    }
+
+    /// <summary>
+    /// Wyszukuje kategoriê po jej identyfikatorze (tak¿e w podkategoriach).
+    /// </summary>
+    public Category? GetById(int id)
+    {
+        return GetAllFlattened().FirstOrDefault(c => c.Id == id);
+    }
+
+    /// <summary>
+    /// Dodaje now¹ kategoriê lub podkategoriê.
+    /// Jeœli parentId != null, dodaje jako dziecko istniej¹cej kategorii.
+    /// </summary>
+    public void Add(Category category, int? parentId = null)
+    {
+        if (parentId == null)
+        {
+            _cache.Add(category);
+        }
+        else
+        {
+            var parent = GetById(parentId.Value);
+            if (parent != null)
+            {
+                parent.Subcategories.Add(category);
+                category.ParentId = parent.Id;
+            }
+        }
+
         _repo.Save(_cache);
     }
-    public void Update(Category c)
-    {
-        var idx = _cache.FindIndex(x => x.Id == c.Id);
-        if (idx == -1) throw new Exception("Component not found");
-        _cache[idx] = c;
-        _repo.Save(_cache);
-    }
+
+    /// <summary>
+    /// Usuwa kategoriê o podanym Id (rekurencyjnie w ca³ym drzewie).
+    /// </summary>
     public void Delete(int id)
     {
-        _cache.RemoveAll(x => x.Id == id);
+        if (TryDeleteFromList(_cache, id))
+            _repo.Save(_cache);
+    }
+
+    private bool TryDeleteFromList(List<Category> list, int id)
+    {
+        var item = list.FirstOrDefault(c => c.Id == id);
+        if (item != null)
+        {
+            list.Remove(item);
+            return true;
+        }
+
+        foreach (var cat in list)
+        {
+            if (TryDeleteFromList(cat.Subcategories, id))
+                return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Zastêpuje dane kategorii (aktualizacja).
+    /// </summary>
+    public void Update(Category category)
+    {
+        var existing = GetById(category.Id);
+        if (existing == null) return;
+
+        existing.Name = category.Name;
+        existing.Description = category.Description;
+        existing.ParentId = category.ParentId;
         _repo.Save(_cache);
     }
-    public IEnumerable<Category> Search(string q)
+
+    // --- Pomocnicze ---
+    private void Flatten(Category node, List<Category> result)
     {
-        if (string.IsNullOrWhiteSpace(q)) return GetAll();
-        q = q.Trim().ToLowerInvariant();
-        return _cache.Where(c =>
-        (c.Name ?? "").ToLowerInvariant().Contains(q)
-        ).OrderBy(c => c.Name);
+        result.Add(node);
+        foreach (var sub in node.Subcategories)
+            Flatten(sub, result);
+    }
+
+    public string GetFullPath(int categoryId)
+    {
+        var parts = new List<string>();
+        var current = GetById(categoryId);
+
+        while (current != null)
+        {
+            parts.Insert(0, current.Name);
+            current = current.ParentId.HasValue ? GetById(current.ParentId.Value) : null;
+        }
+
+        return string.Join(" / ", parts);
+    }
+
+    /// <summary>
+    /// Nadpisuje wszystkie kategorie now¹ list¹ (np. po imporcie JSON-a).
+    /// </summary>
+    public void SetAll(List<Category> categories)
+    {
+        _cache = categories ?? new List<Category>();
+        _repo.Save(_cache);
     }
 }

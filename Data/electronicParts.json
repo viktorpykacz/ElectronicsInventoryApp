@@ -16,7 +16,7 @@
   {
     "Id": 2,
     "Name": "ESP32 DevKitC",
-    "CategoryId": 10,
+    "CategoryId": 2,
     "Manufacturer": "Espressif",
     "PartNumber": "ESP32-DEVKITC",
     "Description": "Moduł deweloperski ESP32 z USB-UART",

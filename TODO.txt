@@ -1,6 +1,40 @@
 ﻿Co do zrobienia:
 1. Dodanie TAB w głównym widoku.
 
+Drzewko kategorii:
+
+-Elementy pasywne
+	-Rezystory
+	-Kondensatory
+		-elektrolityczne
+		-ceramiczne
+		-foliowe
+	-Cewki i dławiki
+	-Potencjometry
+-Elementy aktywne
+	-Diody
+		-prostownicze
+		-Zenera
+		-LED
+		-RGB
+	-Tranzystory
+		-NPN
+		-PNP
+		-MOSFET
+		-JFET
+	-Układy scalone
+	-Stabilizatory napięcia
+
+-Interfejsy użytkownika
+	-Wyświetlacze (LCD, OLED, TFT, ePaper)
+	-Klawiatury matrycowe, przyciski
+	-Enkodery, joysticki
+	-Buzzer
+
+
+
+
+
 
 1. Mikrokontrolery i moduły rozwojowe
 ESP32 / ESP8266 / ESP32-S3
@@ -19,18 +53,10 @@ Gazu i jakości powietrza (MQ-series, CCS811)
 Magnetyczne / Hall’a
 Inne specjalistyczne (np. ciśnienia, dotyku, napięcia)
 
-3. Elementy pasywne
-Rezystory (wartości, moc, typ SMD/THT)
-Kondensatory (elektrolityczne, ceramiczne, foliowe)
-Cewki i dławiki
-Potencjometry i trymerki
 
-4. Elementy aktywne
 
-Diody (prostownicze, Zenera, LED, RGB)
-Tranzystory (NPN, PNP, MOSFET, JFET)
-Układy scalone (TTL, CMOS, ADC, DAC, regulator napięcia, op-amp)
-Stabilizatory napięcia (LM7805, LM317, itp.)
+
+
 
 5. Moduły komunikacyjne
 
@@ -58,13 +84,7 @@ Moduły ładowania (TP4056, BMS)
 Przetwornice (step-up, step-down)
 Kable zasilające, złącza DC, koszyki na baterie
 
-8. Interfejsy użytkownika
 
-Wyświetlacze (LCD, OLED, TFT, ePaper)
-Klawiatury matrycowe, przyciski
-Enkodery, joysticki
-Buzzer / głośniczki
-Diody sygnalizacyjne
 
 9. Płytki, złącza i okablowanie
 

@@ -1,6 +1,106 @@
 [
   {
     "Id": 1,
-    "Name": "Rezystory"
+    "Name": "Elementy pasywne",
+    "ParentId": null,
+    "Subcategories": [
+      {
+        "Id": 101,
+        "Name": "Rezystory",
+        "ParentId": 1,
+        "Subcategories": []
+      },
+      {
+        "Id": 102,
+        "Name": "Kondensatory",
+        "ParentId": 1,
+        "Subcategories": [
+          {
+            "Id": 1021,
+            "Name": "Elektrolityczne",
+            "ParentId": 102,
+            "Subcategories": []
+          },
+          {
+            "Id": 1022,
+            "Name": "Ceramiczne",
+            "ParentId": 102,
+            "Subcategories": []
+          },
+          {
+            "Id": 1023,
+            "Name": "Foliowe",
+            "ParentId": 102,
+            "Subcategories": []
+          }
+        ]
+      },
+      {
+        "Id": 103,
+        "Name": "Cewki i dławiki",
+        "ParentId": 1,
+        "Subcategories": []
+      },
+      {
+        "Id": 104,
+        "Name": "Potencjometry",
+        "ParentId": 1,
+        "Subcategories": []
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Elementy aktywne",
+    "ParentId": null,
+    "Subcategories": []
+  },
+  {
+    "Id": 3,
+    "Name": "Interfejsy użytkownika",
+    "ParentId": null,
+    "Subcategories": []
+  },
+  {
+    "Id": 4,
+    "Name": "Mikrokontrolery i moduły rozwojowe",
+    "ParentId": null,
+    "Subcategories": []
+  },
+  {
+    "Id": 5,
+    "Name": "Czujniki (sensory)",
+    "ParentId": null,
+    "Subcategories": []
+  },
+  {
+    "Id": 6,
+    "Name": "Moduły komunikacyjne",
+    "ParentId": null,
+    "Subcategories": []
+  },
+  {
+    "Id": 7,
+    "Name": "Silniki i elementy napędowe",
+    "ParentId": null,
+    "Subcategories": []
+  },
+  {
+    "Id": 8,
+    "Name": "Zasilanie",
+    "ParentId": null,
+    "Subcategories": []
+  },
+  {
+    "Id": 9,
+    "Name": "Płytki, złącza i okablowanie",
+    "ParentId": null,
+    "Subcategories": []
+  },
+  {
+    "Id": 10,
+    "Name": "Oświetlenie i LED",
+    "ParentId": null,
+    "Subcategories": []
   }
 ]
