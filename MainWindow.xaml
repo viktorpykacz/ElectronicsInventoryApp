@@ -7,6 +7,7 @@
     <DockPanel Margin="10">
 
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" VerticalAlignment="Top">
+            <Button x:Name="BtnRefresh" Content="Odśwież" Margin="8,0,0,0" />
             <Button x:Name="BtnAdd" Content="Dodaj" Margin="8,0,0,0" Click="BtnAdd_Click" />
             <Button x:Name="BtnEdit" Content="Edytuj" Margin="8,0,0,0" Click="BtnEdit_Click" />
             <Button x:Name="BtnDelete" Content="Usuń" Margin="8,0,0,0" Click="BtnDelete_Click" />

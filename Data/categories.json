@@ -1,106 +1,524 @@
 [
   {
     "Id": 1,
-    "Name": "Elementy pasywne",
+    "Name": "Czujniki,sensory,moduły",
     "ParentId": null,
     "Subcategories": [
       {
-        "Id": 101,
-        "Name": "Rezystory",
+        "Id": 2,
+        "Name": "Temperatury",
         "ParentId": 1,
         "Subcategories": []
       },
       {
-        "Id": 102,
-        "Name": "Kondensatory",
-        "ParentId": 1,
-        "Subcategories": [
-          {
-            "Id": 1021,
-            "Name": "Elektrolityczne",
-            "ParentId": 102,
-            "Subcategories": []
-          },
-          {
-            "Id": 1022,
-            "Name": "Ceramiczne",
-            "ParentId": 102,
-            "Subcategories": []
-          },
-          {
-            "Id": 1023,
-            "Name": "Foliowe",
-            "ParentId": 102,
-            "Subcategories": []
-          }
-        ]
-      },
-      {
-        "Id": 103,
-        "Name": "Cewki i dławiki",
+        "Id": 3,
+        "Name": "Temperatury i wilgotności",
         "ParentId": 1,
         "Subcategories": []
       },
       {
-        "Id": 104,
-        "Name": "Potencjometry",
+        "Id": 4,
+        "Name": "Ruchu i przyspieszenia",
+        "ParentId": 1,
+        "Subcategories": []
+      },
+      {
+        "Id": 5,
+        "Name": "Światła i koloru",
+        "ParentId": 1,
+        "Subcategories": []
+      },
+      {
+        "Id": 6,
+        "Name": "Odległości",
+        "ParentId": 1,
+        "Subcategories": []
+      },
+      {
+        "Id": 7,
+        "Name": "Gazu i jakości powietrza",
+        "ParentId": 1,
+        "Subcategories": []
+      },
+      {
+        "Id": 8,
+        "Name": "Magnetyczne",
+        "ParentId": 1,
+        "Subcategories": []
+      },
+      {
+        "Id": 9,
+        "Name": "Temperatury i wilgotności i ciśnienia",
+        "ParentId": 1,
+        "Subcategories": []
+      },
+      {
+        "Id": 10,
+        "Name": "Napięcia i prądu",
+        "ParentId": 1,
+        "Subcategories": []
+      },
+      {
+        "Id": 11,
+        "Name": "Dotyku",
+        "ParentId": 1,
+        "Subcategories": []
+      },
+      {
+        "Id": 12,
+        "Name": "Czytnik kart pamięci",
         "ParentId": 1,
         "Subcategories": []
       }
     ]
   },
+
   {
-    "Id": 2,
+    "Id": 20,
     "Name": "Elementy aktywne",
     "ParentId": null,
-    "Subcategories": []
+    "Subcategories": [
+      {
+        "Id": 21,
+        "Name": "Diody",
+        "ParentId": 20,
+        "Subcategories": [
+          {
+            "Id": 22,
+            "Name": "Prostownicze",
+            "ParentId": 21,
+            "Subcategories": []
+          },
+          {
+            "Id": 23,
+            "Name": "Zenera",
+            "ParentId": 21,
+            "Subcategories": []
+          },
+          {
+            "Id": 24,
+            "Name": "LED",
+            "ParentId": 21,
+            "Subcategories": []
+          },
+          {
+            "Id": 25,
+            "Name": "RGB",
+            "ParentId": 21,
+            "Subcategories": []
+          }
+        ]
+      },
+      {
+        "Id": 30,
+        "Name": "Tranzystory",
+        "ParentId": 20,
+        "Subcategories": [
+          {
+            "Id": 31,
+            "Name": "NPN",
+            "ParentId": 30,
+            "Subcategories": []
+          },
+          {
+            "Id": 32,
+            "Name": "PNP",
+            "ParentId": 30,
+            "Subcategories": []
+          },
+          {
+            "Id": 33,
+            "Name": "MOSFET",
+            "ParentId": 30,
+            "Subcategories": []
+          },
+          {
+            "Id": 34,
+            "Name": "JFET",
+            "ParentId": 30,
+            "Subcategories": []
+          }
+        ]
+      },
+      {
+        "Id": 40,
+        "Name": "Układy scalone",
+        "ParentId": 20,
+        "Subcategories": []
+      },
+      {
+        "Id": 41,
+        "Name": "Stabilizatory napięcia",
+        "ParentId": 20,
+        "Subcategories": []
+      }
+    ]
   },
+
   {
-    "Id": 3,
+    "Id": 50,
+    "Name": "Elementy pasywne",
+    "ParentId": null,
+    "Subcategories": [
+      {
+        "Id": 51,
+        "Name": "Rezystory",
+        "ParentId": 50,
+        "Subcategories": []
+      },
+      {
+        "Id": 52,
+        "Name": "Kondensatory",
+        "ParentId": 50,
+        "Subcategories": [
+          {
+            "Id": 53,
+            "Name": "Elektrolityczne",
+            "ParentId": 52,
+            "Subcategories": []
+          },
+          {
+            "Id": 54,
+            "Name": "Ceramiczne",
+            "ParentId": 52,
+            "Subcategories": []
+          },
+          {
+            "Id": 55,
+            "Name": "Foliowe",
+            "ParentId": 52,
+            "Subcategories": []
+          }
+        ]
+      },
+      {
+        "Id": 56,
+        "Name": "Cewki i dławiki",
+        "ParentId": 50,
+        "Subcategories": []
+      },
+      {
+        "Id": 57,
+        "Name": "Potencjometry",
+        "ParentId": 50,
+        "Subcategories": []
+      }
+    ]
+  },
+
+  {
+    "Id": 60,
     "Name": "Interfejsy użytkownika",
     "ParentId": null,
-    "Subcategories": []
+    "Subcategories": [
+      {
+        "Id": 61,
+        "Name": "Joysticki",
+        "ParentId": 60,
+        "Subcategories": []
+      },
+      {
+        "Id": 62,
+        "Name": "Enkodery",
+        "ParentId": 60,
+        "Subcategories": []
+      },
+      {
+        "Id": 63,
+        "Name": "Buzzery",
+        "ParentId": 60,
+        "Subcategories": []
+      },
+      {
+        "Id": 64,
+        "Name": "Klawiatury matrycowe",
+        "ParentId": 60,
+        "Subcategories": []
+      },
+      {
+        "Id": 65,
+        "Name": "Przyciski",
+        "ParentId": 60,
+        "Subcategories": []
+      },
+      {
+        "Id": 66,
+        "Name": "Wyświetlacze",
+        "ParentId": 60,
+        "Subcategories": [
+          {
+            "Id": 67,
+            "Name": "LCD",
+            "ParentId": 66,
+            "Subcategories": []
+          },
+          {
+            "Id": 68,
+            "Name": "OLED",
+            "ParentId": 66,
+            "Subcategories": []
+          },
+          {
+            "Id": 69,
+            "Name": "TFT",
+            "ParentId": 66,
+            "Subcategories": []
+          },
+          {
+            "Id": 70,
+            "Name": "ePaper",
+            "ParentId": 66,
+            "Subcategories": []
+          },
+          {
+            "Id": 71,
+            "Name": "Alfanumeryczne",
+            "ParentId": 66,
+            "Subcategories": []
+          },
+          {
+            "Id": 72,
+            "Name": "Segmentowe",
+            "ParentId": 66,
+            "Subcategories": []
+          }
+        ]
+      }
+    ]
   },
+
   {
-    "Id": 4,
-    "Name": "Mikrokontrolery i moduły rozwojowe",
+    "Id": 80,
+    "Name": "Mikrokontrolery",
     "ParentId": null,
-    "Subcategories": []
+    "Subcategories": [
+      {
+        "Id": 81,
+        "Name": "ESP",
+        "ParentId": 80,
+        "Subcategories": [
+          {
+            "Id": 82,
+            "Name": "ESP8266",
+            "ParentId": 81,
+            "Subcategories": []
+          },
+          {
+            "Id": 83,
+            "Name": "ESP32",
+            "ParentId": 81,
+            "Subcategories": []
+          }
+        ]
+      },
+      {
+        "Id": 84,
+        "Name": "Arduino",
+        "ParentId": 80,
+        "Subcategories": [
+          {
+            "Id": 85,
+            "Name": "Uno",
+            "ParentId": 84,
+            "Subcategories": []
+          },
+          {
+            "Id": 86,
+            "Name": "Nano",
+            "ParentId": 84,
+            "Subcategories": []
+          },
+          {
+            "Id": 87,
+            "Name": "Mega",
+            "ParentId": 84,
+            "Subcategories": []
+          }
+        ]
+      },
+      {
+        "Id": 88,
+        "Name": "Raspberry",
+        "ParentId": 80,
+        "Subcategories": [
+          {
+            "Id": 89,
+            "Name": "Pico",
+            "ParentId": 88,
+            "Subcategories": []
+          },
+          {
+            "Id": 90,
+            "Name": "Zero",
+            "ParentId": 88,
+            "Subcategories": []
+          },
+          {
+            "Id": 91,
+            "Name": "Pi",
+            "ParentId": 88,
+            "Subcategories": []
+          }
+        ]
+      },
+      {
+        "Id": 92,
+        "Name": "Attiny",
+        "ParentId": 80,
+        "Subcategories": []
+      }
+    ]
   },
+
   {
-    "Id": 5,
-    "Name": "Czujniki (sensory)",
-    "ParentId": null,
-    "Subcategories": []
-  },
-  {
-    "Id": 6,
+    "Id": 100,
     "Name": "Moduły komunikacyjne",
     "ParentId": null,
-    "Subcategories": []
+    "Subcategories": [
+      {
+        "Id": 101,
+        "Name": "Bluetooth",
+        "ParentId": 100,
+        "Subcategories": []
+      },
+      {
+        "Id": 102,
+        "Name": "LoRa",
+        "ParentId": 100,
+        "Subcategories": []
+      },
+      {
+        "Id": 103,
+        "Name": "GSM/GPS/GNSS",
+        "ParentId": 100,
+        "Subcategories": []
+      },
+      {
+        "Id": 104,
+        "Name": "RFID",
+        "ParentId": 100,
+        "Subcategories": []
+      },
+      {
+        "Id": 105,
+        "Name": "2_4_GHz",
+        "ParentId": 100,
+        "Subcategories": []
+      },
+      {
+        "Id": 106,
+        "Name": "433_MHz",
+        "ParentId": 100,
+        "Subcategories": []
+      },
+      {
+        "Id": 107,
+        "Name": "Porty szeregowe",
+        "ParentId": 100,
+        "Subcategories": []
+      }
+    ]
   },
+
   {
-    "Id": 7,
-    "Name": "Silniki i elementy napędowe",
-    "ParentId": null,
-    "Subcategories": []
-  },
-  {
-    "Id": 8,
-    "Name": "Zasilanie",
-    "ParentId": null,
-    "Subcategories": []
-  },
-  {
-    "Id": 9,
-    "Name": "Płytki, złącza i okablowanie",
-    "ParentId": null,
-    "Subcategories": []
-  },
-  {
-    "Id": 10,
+    "Id": 120,
     "Name": "Oświetlenie i LED",
     "ParentId": null,
-    "Subcategories": []
+    "Subcategories": [
+      {
+        "Id": 121,
+        "Name": "Taśmy LED",
+        "ParentId": 120,
+        "Subcategories": []
+      },
+      {
+        "Id": 122,
+        "Name": "Moduły LED",
+        "ParentId": 120,
+        "Subcategories": []
+      },
+      {
+        "Id": 123,
+        "Name": "Sterowniki LED",
+        "ParentId": 120,
+        "Subcategories": []
+      },
+      {
+        "Id": 124,
+        "Name": "Zasilacze LED",
+        "ParentId": 120,
+        "Subcategories": []
+      }
+    ]
+  },
+
+  {
+    "Id": 140,
+    "Name": "Silniki i elementy napędowe",
+    "ParentId": null,
+    "Subcategories": [
+      {
+        "Id": 141,
+        "Name": "Silniki DC",
+        "ParentId": 140,
+        "Subcategories": []
+      },
+      {
+        "Id": 142,
+        "Name": "Silniki krokowe",
+        "ParentId": 140,
+        "Subcategories": []
+      },
+      {
+        "Id": 143,
+        "Name": "Serwomechanizmy",
+        "ParentId": 140,
+        "Subcategories": []
+      },
+      {
+        "Id": 144,
+        "Name": "Sterowniki silników",
+        "ParentId": 140,
+        "Subcategories": []
+      }
+    ]
+  },
+
+  {
+    "Id": 160,
+    "Name": "Zasilanie",
+    "ParentId": null,
+    "Subcategories": [
+      {
+        "Id": 161,
+        "Name": "Zasilacze",
+        "ParentId": 160,
+        "Subcategories": []
+      },
+      {
+        "Id": 162,
+        "Name": "Akumulatory",
+        "ParentId": 160,
+        "Subcategories": []
+      },
+      {
+        "Id": 163,
+        "Name": "Moduły ładowania",
+        "ParentId": 160,
+        "Subcategories": []
+      },
+      {
+        "Id": 164,
+        "Name": "Przetwornice",
+        "ParentId": 160,
+        "Subcategories": []
+      },
+      {
+        "Id": 165,
+        "Name": "Panele słoneczne",
+        "ParentId": 160,
+        "Subcategories": []
+      }
+    ]
   }
 ]
