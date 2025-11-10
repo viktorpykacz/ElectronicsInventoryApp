@@ -4,43 +4,67 @@
         Title="InventoryApp"
         Height="500" Width="1200">
 
-    <DockPanel Margin="10">
+    <TabControl Margin="10">
 
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" VerticalAlignment="Top">
-            <Button x:Name="BtnRefresh" Content="Odśwież" Margin="8,0,0,0" />
-            <Button x:Name="BtnAdd" Content="Dodaj" Margin="8,0,0,0" Click="BtnAdd_Click" />
-            <Button x:Name="BtnEdit" Content="Edytuj" Margin="8,0,0,0" Click="BtnEdit_Click" />
-            <Button x:Name="BtnDelete" Content="Usuń" Margin="8,0,0,0" Click="BtnDelete_Click" />
-            <Button x:Name="BtnImport" Content="Importuj" Margin="20,0,0,0" Click="BtnImport_Click" />
-            <Button x:Name="BtnExport" Content="Eksportuj" Margin="8,0,0,0" Click="BtnExport_Click" />
-        </StackPanel>
+        <!-- TAB 1: Lista elementów -->
+        <TabItem Header="Komponenty">
+            <DockPanel>
 
-        <DataGrid x:Name="DataGridComponents"
-                  AutoGenerateColumns="False"
-                  IsReadOnly="True"
-                  CanUserAddRows="False"
-                  Margin="10"
-                  MouseDoubleClick="DataGridComponents_MouseDoubleClick"
-                  ScrollViewer.VerticalScrollBarVisibility="Auto"
-                  ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" VerticalAlignment="Top">
+                    <Button x:Name="BtnRefresh" Content="Odśwież" Margin="8,0,0,0" />
+                    <Button x:Name="BtnAdd" Content="Dodaj" Margin="8,0,0,0" Click="BtnAdd_Click" />
+                    <Button x:Name="BtnEdit" Content="Edytuj" Margin="8,0,0,0" Click="BtnEdit_Click" />
+                    <Button x:Name="BtnDelete" Content="Usuń" Margin="8,0,0,0" Click="BtnDelete_Click" />
+                    <Button x:Name="BtnImport" Content="Importuj" Margin="20,0,0,0" Click="BtnImport_Click" />
+                    <Button x:Name="BtnExport" Content="Eksportuj" Margin="8,0,0,0" Click="BtnExport_Click" />
+                </StackPanel>
 
-            <DataGrid.ContextMenu>
-                <ContextMenu>
-                    <MenuItem Header="🖋️ Edytuj" Click="MenuItem_Edit_Click"/>
-                    <MenuItem Header="🗑️ Usuń" Click="MenuItem_Delete_Click"/>
-                    <Separator/>
-                    <MenuItem Header="🔍 Szczegóły" Click="MenuItem_Details_Click"/>
-                </ContextMenu>
-            </DataGrid.ContextMenu>
+                <DataGrid x:Name="DataGridComponents"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          CanUserAddRows="False"
+                          Margin="10"
+                          MouseDoubleClick="DataGridComponents_MouseDoubleClick"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          CanUserResizeColumns="False"
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto">
 
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Nazwa" Binding="{Binding Name}" Width="Auto" />
-                <DataGridTextColumn Header="Producent" Binding="{Binding Manufacturer}" Width="Auto" />
-                <DataGridTextColumn Header="Nr katalogowy producenta" Binding="{Binding PartNumber}" Width="Auto" />
-                <DataGridTextColumn Header="Opis" Binding="{Binding Description}" Width="Auto" />
-                <DataGridTextColumn Header="Kategoria" Binding="{Binding CategoryPath}" Width="Auto" />
-                <DataGridTextColumn Header="Ilość" Binding="{Binding Quantity}" Width="Auto" />
-            </DataGrid.Columns>
-        </DataGrid>
-    </DockPanel>
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="🖋️ Edytuj" Click="MenuItem_Edit_Click"/>
+                            <MenuItem Header="🗑️ Usuń" Click="MenuItem_Delete_Click"/>
+                            <Separator/>
+                            <MenuItem Header="📤 Eksportuj do XLS" Click="MenuItem_ExportXls_Click"/>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Nazwa" Binding="{Binding Name}" Width="Auto" />
+                        <DataGridTextColumn Header="Producent" Binding="{Binding Manufacturer}" Width="Auto" />
+                        <DataGridTextColumn Header="Nr katalogowy producenta" Binding="{Binding PartNumber}" Width="Auto" />
+                        <DataGridTextColumn Header="Opis" Binding="{Binding Description}" Width="Auto" />
+                        <DataGridTextColumn Header="Kategoria" Binding="{Binding Category}" Width="Auto" />
+                        <DataGridTextColumn Header="Podkategoria" Binding="{Binding Subcategory}" Width="Auto" />
+                        <DataGridTextColumn Header="Rodzaj" Binding="{Binding Type}" Width="Auto" />
+                        <DataGridTextColumn Header="Ilość" Binding="{Binding Quantity}" Width="Auto" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </TabItem>
+
+        <!-- TAB 2 placeholder -->
+        <TabItem Header="Statystyki">
+            <TextBlock Text="Tutaj będą statystyki..." 
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       FontSize="18" Foreground="Gray"/>
+        </TabItem>
+
+        <!-- TAB 3 placeholder -->
+        <TabItem Header="Ustawienia">
+            <TextBlock Text="Ustawienia aplikacji w przyszłości..."
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       FontSize="18" Foreground="Gray"/>
+        </TabItem>
+
+    </TabControl>
 </Window>

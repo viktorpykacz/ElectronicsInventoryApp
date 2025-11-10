@@ -136,4 +136,24 @@ public class CategoryService
         _cache = categories ?? new List<Category>();
         _repo.Save(_cache);
     }
+
+    public (string? Category, string? Subcategory, string? Type) GetPathLevels(int categoryId)
+    {
+        var path = new List<Category>();
+        var current = GetById(categoryId);
+
+        while (current != null)
+        {
+            path.Insert(0, current);
+            if (current.ParentId == null) break;
+            current = GetById(current.ParentId.Value);
+        }
+
+        // Uzupe³niamy do 3 poziomów
+        string? l1 = path.Count > 0 ? path[0].Name : null;
+        string? l2 = path.Count > 1 ? path[1].Name : null;
+        string? l3 = path.Count > 2 ? path[2].Name : null;
+
+        return (l1, l2, l3);
+    }
 }
